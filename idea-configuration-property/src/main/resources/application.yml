@@ -1,0 +1,24 @@
+springdoc:
+  api-docs:
+    enabled: true
+    path: /v1/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    displayRequestDuration: true
+    tagsSorter: alpha
+    display-query-params-without-oauth2: true
+    use-root-path: true
+  cache:
+    disabled: true
+  info:
+    title: Demo Title
+    description: Demo Description
+    version: '@version@'
+    termsOfService: https://www.demo.by
+    contact:
+      name: Demo
+      email: demo@demo.by
+      url: https://www.demo.by
+    license:
+      name: Demo License
+      url: https://www.demo.by
