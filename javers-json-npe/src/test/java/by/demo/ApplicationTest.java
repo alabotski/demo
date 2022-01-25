@@ -85,11 +85,11 @@ class ApplicationTest {
 
     //1 Change sub-sub child LimitSignatureEntity
     limitSignatureEntity.setCaption("1 Change");
-    limitSignatureRepository.save(limitSignatureEntity);
+    limitRepository.save(limitEntity);
 
     //2 Change sub child LimitRangeEntity
     limitRangeEntity.setCaption("2 Change");
-    limitRangeRepository.save(limitRangeEntity);
+    limitRepository.save(limitEntity);
 
     //3 Change parent LimitEntity
     limitEntity.setCaption("3 Change");
