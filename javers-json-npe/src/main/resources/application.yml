@@ -1,0 +1,34 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:mydb
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+
+javers:
+  algorithm: simple
+  mappingStyle: field
+  initialChanges: true
+  terminalChanges: true
+  prettyPrint: false
+  typeSafeValues: true
+  dialect: H2
+#  sqlSchema: ${JAVERS_SQLSCHEMA}
+  sqlSchemaManagementEnabled: true
+  commitIdGenerator: synchronized_sequence
+  packagesToScan: ua.aval.limitmanagement.model.entity
+  sqlGlobalIdCacheDisabled: false
+  auditableAspectEnabled: false
+  springDataAuditableRepositoryAspectEnabled: true
+  prettyPrintDateFormats:
+    localDateTime: "yyyy-MM-dd'T'HH:mm:ss.SSS"
+    zonedDateTime: "yyyy-MM-dd'T'HH:mm:ss.SSSXXX"
+    localDate: "yyyy-MM-dd"
+    localTime: "hh:mm:ss.SSS"
+  objectAccessHook: org.javers.hibernate.integration.HibernateUnproxyObjectAccessHook
+  sqlGlobalIdTableName: audit_global_id
+  sqlCommitTableName: audit_commit
+  sqlSnapshotTableName: audit_snapshot
+  sqlCommitPropertyTableName: audit_commit_property
